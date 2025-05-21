@@ -1,54 +1,83 @@
 <!DOCTYPE html>
 <html>
+<!-- Este es el documento HTML principal, comienza la estructura básica -->
 
 <head>
-    <title>Instagram Feed</title>
+    <title>Instagram Feed</title> <!-- Título que aparece en la pestaña del navegador -->
+
+    <!-- Enlace al archivo CSS donde está todo el diseño visual personalizado -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Enlace a Font Awesome para usar íconos como corazón, comentario, etc. -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
     <div>
+        <!-- Cabecera del sitio. Está vacía, pero podrías poner un logo o menú aquí -->
         <header>
         </header>
+
+        <!-- Contenedor central que ajusta el ancho del contenido y lo centra -->
         <div class="container">
+
+            <!-- Comienza el post de Instagram -->
             <div class="post" display="flex">
+
+                <!-- Encabezado del post (nombre de usuario, ícono y 3 puntos de opciones) -->
                 <div class="post-header" style="display: flex; align-items: center; justify-content: space-between;">
+
+                    <!-- Sección izquierda del header: ícono + texto -->
                     <div style="display: flex; align-items: center;">
+                        <!-- Ícono de HTML como avatar -->
                         <img src="https://img.icons8.com/ios-glyphs/30/html-5.png" alt="html-5"
                             style="width:32px; height:32px; margin-right:8px; display:inline-block; vertical-align:middle; object-fit:contain;">
+
+                        <!-- Nombre del post y usuario -->
                         <div>
-                            <h2>HTML5</h2>
-                            <p>Rigoberto</p>
+                            <h2>HTML5</h2> <!-- Título de la publicación -->
+                            <p>Rigoberto</p> <!-- Nombre de usuario -->
                         </div>
                     </div>
+
+                    <!-- Ícono de opciones (tres puntitos) a la derecha -->
                     <div>
                         <i class="fa-solid fa-ellipsis-vertical"></i>
-
                     </div>
 
                 </div>
+
+                <!-- Imagen principal del post -->
                 <div>
-                    <img
-                        src="https://i.imgur.com/BB7t1vn.png">
+                    <img src="https://i.imgur.com/BB7t1vn.png"> <!-- Imagen publicada -->
                 </div>
+
+                <!-- Pie del post: iconos, likes y texto -->
                 <div>
+
+                    <!-- Grupo de iconos debajo de la imagen -->
                     <div class="iconos-post">
                         <span class="iconos-izq">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-regular fa-comment"></i>
-                            <i class="fa-regular fa-paper-plane"></i>
+                            <!-- Íconos del lado izquierdo -->
+                            <i class="fa-regular fa-heart"></i> <!-- Corazón -->
+                            <i class="fa-regular fa-comment"></i> <!-- Comentario -->
+                            <i class="fa-regular fa-paper-plane"></i> <!-- Enviar -->
                         </span>
+
                         <span class="icono-der">
-                            <i class="fa-regular fa-bookmark"></i>
+                            <!-- Ícono del lado derecho -->
+                            <i class="fa-regular fa-bookmark"></i> <!-- Guardar -->
                         </span>
                     </div>
+
+                    <!-- Texto de "liked by" -->
                     <p>Liked by <strong>4GeeksAcademy, html5, Web</strong> and <strong>100.000 others</strong></p><br>
+
+                    <!-- Descripción o contenido del post -->
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates deserunt perferendis quia harum, ab distinctio est vel quam quaerat eius iste magni sequi sunt corrupti nihil eaque exercitationem rerum quo.</p>
                 </div>
             </div>
         </div>
-
 </body>
 
 </html>

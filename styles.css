@@ -1,91 +1,93 @@
 body {
-    background: #000;
-    margin: 0;
-    font-family: sans-serif;
+    background: #000; /* Fondo negro para toda la página */
+    margin: 0; /* Elimina el margen predeterminado del navegador */
+    font-family: sans-serif; /* Fuente predeterminada sin serifas */
 }
 
 div {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
 }
+
 
 header {
-    background: #fff;
-    padding: 10px;
+    background: #fff; /* Fondo blanco para el encabezado */
+    padding: 10px; /* Espaciado interno alrededor del contenido del header */
 }
-
 header h1 {
-    margin: 0;
+    margin: 0; /* Elimina el margen para que el título esté bien alineado */
 }
 
 .container {
-    width: 600px;
-    margin: auto;
+    width: 100%;
+    max-width: 525px;   /* Menos ancho horizontalmente */
+    margin: 40px auto;  /* Centrado y más espacio arriba/abajo */
 }
-
 .post {
-    background: #fff;
-    margin-top: 10px;
-    padding: 32px;
-    border-radius: 0;
+    background: #fff;                     /* Fondo blanco para el post */
+    margin-top: 10px;                     /* Separación del post respecto al elemento de arriba */
+    padding: 32px 32px 32px 32px;         /* Espaciado interno de 32px en todos los lados */
+    border-radius: 0;                     /* Sin bordes redondeados */
+    position: relative;                   /* Permite posicionar elementos hijos de forma absoluta si se desea */
 }
 
 .post img {
-    width: 100%;
-    display: block;
-    margin-bottom: 24px;
-    height: auto; /* Mantiene la proporción */
+    width: calc(100% + 64px);             /* La imagen se extiende 32px más a cada lado para compensar el padding */
+    margin-left: -32px;                   /* Empuja la imagen hacia la izquierda para que sobresalga del padding */
+    margin-right: -32px;                  /* Igual hacia la derecha */
+    display: block;                       /* Elimina espacio extra debajo de la imagen */
+    height: auto;                         /* Mantiene la proporción original de la imagen */
+    margin-bottom: 24px;                  /* Espacio entre la imagen y el contenido siguiente */
 }
-.post-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+.post-header > div:first-child {
+    display: flex;                        /* Alinea el contenido en una fila horizontal */
+    align-items: center;                  /* Centra verticalmente los elementos hijos */
+    margin-left: 16px;                    /* Deja más espacio desde el borde izquierdo */
+    width: auto;                          /* El ancho se ajusta automáticamente al contenido */
 }
 
 .post-header > div:first-child {
     display: inline-block;
-    width: 80%;
+    width: 80%; /* El primer bloque ocupa el 80% del ancho */
 }
 
 .post-header > div:last-child {
     display: inline-block;
-    width: 20%;
-    text-align: right;
+    width: 20%; /* El segundo bloque ocupa el 20% del ancho */
+    text-align: right; /* Alinea el contenido (ícono de opciones) a la derecha */
     padding: 10px;
 }
 
 .post-header .fa-ellipsis-vertical {
-    font-size: 24px;
+    font-size: 24px; /* Tamaño del ícono de tres puntos */
 }
 
 .post h2,
 .post p {
     padding: 0;
     margin: 0;
-    line-height: 1.1;
+    line-height: 1.1; /* Altura de línea ajustada */
 }
 
 .post h2 {
-    margin-bottom: 2px;
+    margin-bottom: 2px; /* Espacio debajo del título */
 }
-
 .post p {
-    margin-bottom: 16px;
+    margin-bottom: 16px; /* Espacio debajo del párrafo */
 }
 
 .iconos-post {
-    display: flex;
+    display: flex; /* Flexbox para organizar los íconos */
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Espaciado entre íconos izquierdos y derechos */
     padding-right: 10px;
     margin-bottom: 16px;
 }
-
 .iconos-post i {
-    font-size: 24px;
-    margin-right: 8px;
+    font-size: 28px; /* Tamaño de los íconos */
+    margin-right: 8px; /* Separación entre íconos */
 }
-
 .iconos-izq i:last-child,
 .icono-der i {
-    margin-right: 0;
+    margin-right: 0; /* El último ícono de la izquierda y los de la derecha no tienen margen derecho extra */
 }
